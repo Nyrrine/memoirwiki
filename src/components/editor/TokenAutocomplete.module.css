@@ -1,0 +1,117 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--app-input-bg);
+  border: 1px solid var(--app-input-border);
+  border-radius: 3px;
+  padding: 6px 8px;
+  width: 100%;
+  outline: none;
+  resize: none;
+}
+
+.input:focus {
+  border-color: var(--app-accent);
+  box-shadow: 0 0 0 1px rgba(201, 168, 76, 0.2);
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+.preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 4px;
+  padding: 4px 0 0;
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  align-items: center;
+}
+
+.previewToken {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.previewIcon {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+}
+
+.popup {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: 4px;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  max-height: 240px;
+  overflow-y: auto;
+  margin-bottom: 4px;
+}
+
+.popupHeader {
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--app-border);
+}
+
+.popupHint {
+  font-family: var(--font-body);
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.3px;
+}
+
+.popupItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  cursor: pointer;
+  transition: background 0.08s;
+}
+
+.popupItem:hover,
+.popupItemActive {
+  background: var(--app-surface-raised);
+}
+
+.popupIcon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.popupName {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.popupKey {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}

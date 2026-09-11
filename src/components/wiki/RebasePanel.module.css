@@ -1,0 +1,141 @@
+.panel {
+  border: 1px solid var(--card-border-gold-dim);
+  background: var(--app-surface-raised);
+  margin-bottom: 16px;
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--app-border);
+}
+
+.badge {
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--app-bg);
+  background: var(--card-accent-gold);
+  padding: 3px 8px;
+  margin-top: 2px;
+}
+
+.headText {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.sub {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.dismiss {
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 2px;
+}
+
+.dismiss:hover {
+  color: var(--text-primary);
+}
+
+.blind {
+  margin: 0;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--app-border);
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--card-accent-red);
+}
+
+.pageChanges {
+  border-bottom: 1px solid var(--app-border);
+}
+
+.disclosure {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 9px 14px;
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.disclosure:hover {
+  color: var(--text-gold);
+}
+
+.diffWrap {
+  padding: 0 14px 12px;
+  overflow-x: auto;
+}
+
+.conflicts {
+  display: flex;
+  flex-direction: column;
+}
+
+.conflict {
+  border-bottom: 1px solid var(--app-border);
+  padding-top: 10px;
+}
+
+.conflict:last-child {
+  border-bottom: none;
+}
+
+.conflictHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 14px 8px;
+}
+
+.conflictWhat {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.chosen {
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-gold);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  padding: 0 14px 12px;
+  flex-wrap: wrap;
+}
+
+.fields:not(:empty) {
+  padding: 12px 14px;
+  border-top: 1px solid var(--app-border);
+}

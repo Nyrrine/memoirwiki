@@ -1,0 +1,196 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background: var(--app-bg);
+  color: var(--text-primary);
+}
+
+.header {
+  position: relative;
+  padding: 0 24px;
+  height: 52px;
+  border-bottom: 1px solid var(--app-border);
+  flex-shrink: 0;
+  background-image: url('/ui/sidebar-texture.webp');
+  background-size: 150% 150%;
+  background-position: center center;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 16, 12, 0.78);
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.headerInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logoImg {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoLine {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--app-accent);
+  letter-spacing: 4px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.headerDivider {
+  width: 1px;
+  height: 24px;
+  background: var(--app-border);
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.crumb {
+  display: flex;
+  align-items: center;
+}
+
+.crumbSep {
+  color: var(--text-muted);
+  margin: 0 8px;
+  font-size: 14px;
+}
+
+.crumbLink {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 13px;
+  font-family: var(--font-body);
+}
+
+.crumbLink:hover {
+  color: var(--text-gold);
+}
+
+.crumbCurrent {
+  color: var(--text-primary);
+  font-size: 13px;
+  font-family: var(--font-body);
+}
+
+.headerSearch {
+  flex: 1;
+  min-width: 0;
+  max-width: 420px;
+  margin: 0 20px;
+}
+
+@media (max-width: 720px) {
+  .headerSearch { margin: 0 10px; }
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.backBtn {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--app-border);
+  border-radius: 3px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.backBtn:hover {
+  color: var(--text-gold);
+  border-color: var(--card-border-gold-dim);
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  position: relative;
+  background-image: url('/ui/wiki-viewport-bg-alt.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.content::before {
+  content: '';
+  position: fixed;
+  top: 52px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(18, 16, 14, 0.7);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.content > * {
+  position: relative;
+  z-index: 1;
+}
+
+.modLink {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-gold);
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid var(--app-border-gold);
+  border-radius: 3px;
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+
+.modLink:hover {
+  background: var(--app-accent);
+  color: var(--app-bg);
+}

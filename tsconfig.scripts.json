@@ -1,0 +1,19 @@
+{
+  /* `npx tsc -b` covered src and vite.config.ts and nothing else, so scripts/
+     was typechecked by nothing -- and the rebase test runs under
+     `node --experimental-strip-types`, which ERASES types without checking
+     them. Changing planRebase's signature would have left the test compiling,
+     running, and only failing if an assertion happened to notice. For the one
+     pure, safety-critical module in the flow that is the wrong guarantee.
+
+     It extends the app config rather than the node one so the Slate module
+     augmentation in SlateEditor.tsx is in scope; without it, WikiSection's
+     Descendant values do not typecheck. `types` gains node for process/console
+     while keeping vite/client, since src is in the program. */
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.scripts.tsbuildinfo",
+    "types": ["vite/client", "node"]
+  },
+  "include": ["src", "scripts/test-rebase.ts"]
+}

@@ -1,0 +1,238 @@
+.panel {
+  display: flex;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.panel:last-child {
+  margin-bottom: 0;
+}
+
+.frameColumn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 4px 4px 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.frameStack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skillArt {
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.skillArtMask {
+  position: absolute;
+  left: 13.66%;
+  top: 20.93%;
+  width: 71.94%;
+  height: 71.79%;
+  overflow: hidden;
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.skillArtImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.skillArtPlaceholder {
+  width: 100%;
+  height: 100%;
+}
+
+.skillFrameOverlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.powerBar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: -2px;
+  z-index: 3;
+  padding: 0 4px;
+}
+
+.powerText {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  text-shadow: var(--text-keyline);
+}
+
+.descColumn {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 6px 8px 6px 6px;
+  gap: 3px;
+  position: relative;
+  z-index: 1;
+}
+
+.skillHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.sinIcon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
+  margin-top: 2px;
+}
+
+.headerInfo {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.coinRow {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+
+.goldCoin {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.skillName {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  letter-spacing: 0.3px;
+  color: var(--text-highlight);
+  padding: 5px 22px 5px 8px;
+  background-color: var(--banner-color);
+  clip-path: polygon(0% 0%, calc(100% - 14px) 0%, 100% 100%, 0% 100%);
+}
+
+.statRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.offenseBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-highlight);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2px 6px;
+  border-radius: 2px;
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+
+.olIcon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.atkWeight {
+  font-size: 12px;
+  color: var(--text-gold);
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.effectBlock {
+  padding: 2px 0;
+}
+
+.coinEffects {
+  padding-left: 42px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.coinEffect {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.coinTypeLabel {
+  font-family: var(--font-body);
+  font-size: var(--fs-card-body);
+  font-weight: 700;
+  line-height: 1.5;
+  padding-left: 24px;
+}
+
+.coinEffectRow {
+  display: flex;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.coinEffectText {
+  flex: 1;
+  min-width: 0;
+}
+
+.skillLabel {
+  position: absolute;
+  right: 8px;
+  top: 6px;
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 700;
+  color: #6b5c40;
+  opacity: 0.4;
+  letter-spacing: 1px;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 0;
+  text-shadow: var(--text-keyline);
+}

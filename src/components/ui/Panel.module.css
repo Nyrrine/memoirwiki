@@ -1,0 +1,35 @@
+.panel {
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: 3px;
+}
+
+.raised {
+  background: var(--app-surface-raised);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--app-border);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-gold);
+  margin: 0;
+}
+
+.body {
+  padding: 14px;
+}
+
+.flush .body {
+  padding: 0;
+}

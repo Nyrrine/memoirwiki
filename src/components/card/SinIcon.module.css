@@ -1,0 +1,19 @@
+.icon {
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.sm {
+  width: 20px;
+  height: 20px;
+}
+
+.md {
+  width: 24px;
+  height: 24px;
+}
+
+.lg {
+  width: 40px;
+  height: 40px;
+}

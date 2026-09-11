@@ -1,0 +1,25 @@
+.quote {
+  margin: 20px 0;
+  padding: 16px 20px;
+  border-left: 3px solid var(--wiki-accent, var(--card-border-gold-dim));
+  background: var(--card-panel);
+  border-radius: 0 4px 4px 0;
+}
+
+.text {
+  font-family: var(--wiki-font, var(--font-body));
+  font-size: 15px;
+  font-style: italic;
+  color: var(--wiki-text, var(--text-primary));
+  line-height: 1.6;
+  margin: 0;
+}
+
+.attribution {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--wiki-accent, var(--text-gold));
+  font-style: normal;
+  margin-top: 10px;
+}

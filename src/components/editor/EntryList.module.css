@@ -1,0 +1,163 @@
+.entryList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.addRow {
+  position: relative;
+}
+
+.addBtn {
+  width: 100%;
+  padding: 10px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-gold);
+  background: var(--app-surface-raised);
+  border: 1px dashed var(--app-border);
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.addBtn:hover {
+  background: var(--card-panel);
+  border-color: var(--card-border-gold-dim);
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  z-index: 50;
+  overflow: hidden;
+}
+
+.dropdownItem {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-primary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.1s;
+}
+
+.dropdownItem:hover {
+  background: var(--app-surface-raised);
+  color: var(--text-gold);
+}
+
+.section {
+  margin-top: 4px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+}
+
+.sectionLabel {
+  font-family: var(--font-display);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.sectionCount {
+  font-family: var(--font-display);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--app-surface-raised);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+.entryRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: var(--app-input-bg);
+  border: 1px solid var(--app-input-border);
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 3px;
+  transition: background 0.1s, border-color 0.15s;
+}
+
+.entryRow:hover {
+  background: var(--app-surface-raised);
+  border-color: var(--app-border);
+}
+
+.entryRowActive {
+  border-color: var(--app-accent);
+  background: var(--app-surface-raised);
+  box-shadow: 0 0 0 1px rgba(201, 168, 76, 0.15);
+}
+
+.entryDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.entryIndex {
+  font-family: var(--font-display);
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.entryName {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-primary);
+  font-weight: 500;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.removeBtn {
+  font-size: 11px;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 3px;
+  opacity: 0;
+  transition: color 0.15s, opacity 0.15s;
+}
+
+.entryRow:hover .removeBtn {
+  opacity: 1;
+}
+
+.removeBtn:hover {
+  color: var(--card-accent-red);
+}

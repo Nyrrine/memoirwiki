@@ -1,0 +1,99 @@
+.statsBar {
+  padding: 12px 18px;
+  background: var(--card-bg);
+  position: relative;
+  z-index: 3;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.coreStats {
+  display: flex;
+  align-items: center;
+}
+
+.stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.statIcon {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.statLabel {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-highlight);
+  line-height: 1.1;
+  text-shadow: var(--text-keyline);
+}
+
+.statDivider {
+  width: 1px;
+  height: 36px;
+  background: var(--card-border);
+}
+
+.resistances {
+  display: flex;
+  gap: 6px;
+}
+
+.resBadge {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 6px 6px;
+}
+
+.resIcon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.resText {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  line-height: 1;
+}
+
+.resLevel {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  text-shadow: var(--text-keyline);
+}
+
+.resMultiplier {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  line-height: 1;
+  text-shadow: var(--text-keyline);
+}

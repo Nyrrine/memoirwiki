@@ -1,0 +1,429 @@
+.leftPanel {
+  width: 450px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.tabBar {
+  display: flex;
+  border-bottom: 1px solid var(--card-border);
+  flex-shrink: 0;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 6px 0;
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.15s;
+}
+
+.tab:hover {
+  color: var(--text-secondary);
+}
+
+.tabActive {
+  color: var(--text-gold);
+}
+
+.tabActive::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: var(--card-accent-gold);
+}
+
+.tabContent {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tabContent::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  padding: 12px 18px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.headerTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.headerIcons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sinnerIcon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
+}
+
+.uptieIcon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px rgba(212, 175, 55, 0.3));
+}
+
+.levelBadge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.levelText {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+  text-shadow: var(--text-keyline);
+}
+
+.identityName {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-highlight);
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-shadow: var(--text-keyline);
+}
+
+.characterRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.characterName {
+  font-family: var(--font-body);
+  font-size: 17px;
+  color: var(--text-secondary);
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.rarityIcon {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.4));
+}
+
+.goldLine {
+  height: 1px;
+  margin: 4px 16px;
+  background: var(--card-border-gold-dim);
+}
+
+.infoSection {
+  padding: 10px 18px;
+}
+
+.infoLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.infoLabelText {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.infoLabelLine {
+  flex: 1;
+  height: 1px;
+  background: var(--card-border-gold-dim);
+}
+
+.traitsMirrorRow {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.traitsColumn {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.traitTag {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: #9f6a3a;
+  padding: 3px 10px;
+  background: #3e2916;
+}
+
+.traitStruck {
+  color: #d30000;
+  text-decoration: line-through;
+  text-decoration-color: #d30000;
+  text-decoration-thickness: 2px;
+}
+
+.mirrorColumn {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  max-width: 100px;
+}
+
+.mirrorIcon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.mirrorLabel {
+  font-family: var(--font-body);
+  font-size: 10px;
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.sanityContent {
+  padding: 10px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sanitySection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sanitySectionLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sanitySectionLabelText {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.sanitySectionLabelLine {
+  flex: 1;
+  height: 1px;
+  background: var(--card-border-gold-dim);
+}
+
+.sanityPanicCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--card-panel);
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+}
+
+.sanityPanicIcon {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.4));
+}
+
+.sanityPanicInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.sanityPanicName {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-highlight);
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  word-break: break-word;
+  text-shadow: var(--text-keyline);
+}
+
+.sanityDescRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.sanityDescBlock {
+  padding: 8px 12px;
+  background: var(--card-panel);
+}
+
+.sanityDescLabel {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+}
+
+.sanityDescText {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  color: var(--text-primary);
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+.sanityDescDivider {
+  height: 1px;
+  background: var(--card-border);
+}
+
+.sanityFactorBox {
+  background: var(--card-panel);
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+.sanityFactorBox[data-factor="increasing"] {
+  border-color: #4a9fd8;
+}
+
+.sanityFactorBox[data-factor="decreasing"] {
+  border-color: #c83232;
+}
+
+.sanityFactorHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 5px;
+}
+
+.sanityFactorIcon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.sanityFactorLabel {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sanityFactorBox[data-factor="increasing"] .sanityFactorLabel {
+  color: #4a9fd8;
+}
+
+.sanityFactorBox[data-factor="decreasing"] .sanityFactorLabel {
+  color: #c83232;
+}
+
+.sanityFactorBox[data-factor="increasing"] .sanityFactorItem {
+  color: #4a9fd8;
+}
+
+.sanityFactorBox[data-factor="decreasing"] .sanityFactorItem {
+  color: #c83232;
+}
+
+.sanityFactorList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sanityFactorItem {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  color: var(--text-primary);
+  line-height: 1.45;
+  padding-left: 14px;
+  position: relative;
+}
+
+.sanityFactorItem::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 7px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--card-border-gold-dim);
+}
+
+.sanityFactorEmpty {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+

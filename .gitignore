@@ -1,0 +1,38 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+# .env* and not just `.env`: the service_role key lives in .env.local, and
+# what was actually keeping it out of the published snapshot was the `*.local`
+# line above -- a Vite convention that happens to match. .env.production,
+# .env.vercel and .env.local.bak would all have been committed and
+# force-pushed to a public repo.
+.env*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
+desktop.ini
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.vercel
+backups/
+
+# Supabase CLI scratch
+supabase/.temp/
+

@@ -1,0 +1,262 @@
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.muted {
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+.error {
+  color: var(--card-accent-red);
+  font-size: 16px;
+}
+
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+  background-color: var(--wiki-bg, transparent);
+  color: var(--wiki-text, var(--text-primary));
+  font-family: var(--wiki-font, var(--font-body));
+}
+
+.coverWrap {
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header {
+  padding: 28px 0 0;
+}
+
+.title {
+  font-family: var(--wiki-font, var(--font-display));
+  font-size: 32px;
+  color: var(--wiki-accent, var(--text-gold));
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.subtitle {
+  font-family: var(--wiki-font, var(--font-body));
+  font-size: 15px;
+  color: var(--wiki-text, var(--text-secondary));
+  margin: 6px 0 0;
+  line-height: 1.5;
+}
+
+.headerDivider {
+  height: 2px;
+  background: linear-gradient(90deg, var(--wiki-accent, var(--card-border-gold-dim)), transparent);
+  margin: 16px 0 24px;
+}
+
+.body {
+  min-height: 200px;
+}
+
+.body::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.categoryRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 32px;
+  padding-top: 12px;
+  border-top: 1px solid var(--app-border);
+}
+
+.categoryLabel {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.categoryChip {
+  font-size: 11px;
+  color: var(--text-gold);
+  background: var(--app-surface-raised);
+  border: 1px solid var(--app-border);
+  border-radius: 3px;
+  padding: 2px 8px;
+  text-decoration: none;
+}
+
+.categoryChip:hover {
+  border-color: var(--card-border-gold-dim);
+}
+
+.backlinks {
+  margin-top: 24px;
+  padding: 12px 16px;
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: 3px;
+}
+
+.backlinksTitle {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 8px;
+}
+
+.backlinksList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+}
+
+.backlinkItem {
+  font-size: 13px;
+  color: var(--text-gold);
+  text-decoration: none;
+}
+
+.backlinkItem:hover {
+  color: var(--app-accent-hover);
+  text-decoration: underline;
+}
+
+.byline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0 14px;
+}
+
+.bylineAvatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: none;
+  border: 1px solid var(--card-border-gold-dim);
+  background: var(--card-panel);
+}
+
+.bylineText {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.bylineWho {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.bylineWhen {
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.trails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  margin-top: 28px;
+  padding-top: 16px;
+  border-top: 1px solid var(--card-border);
+}
+
+.trail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.trailLabel {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.trailCount {
+  font-size: 11.5px;
+  color: var(--text-secondary);
+}
+
+.avatarStack {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--card-bg);
+  margin-left: -8px;
+  flex: none;
+  background: var(--card-panel);
+}
+
+.avatar:first-child { margin-left: 0; }
+
+.avatarMore {
+  margin-left: 8px;
+  font-size: 11.5px;
+  color: var(--text-secondary);
+}
+
+.trailOptOut {
+  background: transparent;
+  border: 1px solid var(--app-border);
+  color: var(--text-muted);
+  font-size: 10px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.trailOptOut:hover:not(:disabled) {
+  color: var(--text-primary);
+  border-color: var(--card-border-gold-dim);
+}
+
+.trailOptOut:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.trailError {
+  flex-basis: 100%;
+  font-size: 11px;
+  color: var(--card-accent-red);
+}

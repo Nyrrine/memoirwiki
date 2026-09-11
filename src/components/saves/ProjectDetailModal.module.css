@@ -1,0 +1,114 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.container {
+  position: relative;
+  pointer-events: none;
+}
+
+.cardScale {
+  transform: scale(0.825);
+  transform-origin: center center;
+  filter: drop-shadow(0 8px 40px rgba(0, 0, 0, 0.7));
+  pointer-events: auto;
+}
+
+.actions {
+  position: absolute;
+  bottom: calc(8.75% + 12px);
+  right: calc(8.75% + 12px);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.editBtn {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--app-bg);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: var(--card-accent-gold);
+  border: none;
+  padding: 6px 16px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.editBtn:hover {
+  background: var(--card-border-gold-bright);
+}
+
+.downloadBtn {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--app-bg);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: var(--card-accent-gold);
+  border: none;
+  padding: 6px 16px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.downloadBtn:hover {
+  background: var(--card-border-gold-bright);
+}
+
+.downloadBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.deleteBtn {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(20, 18, 14, 0.85);
+  border: 1px solid var(--app-border);
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.deleteBtn:hover {
+  color: var(--card-accent-red);
+  border-color: var(--card-accent-red);
+}
+
+.deleteBtnConfirm {
+  color: var(--card-accent-red);
+  border-color: var(--card-accent-red);
+}
+
+.deleteBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.status,
+.statusError {
+  font-family: var(--font-display);
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.statusError {
+  color: var(--card-accent-red);
+}

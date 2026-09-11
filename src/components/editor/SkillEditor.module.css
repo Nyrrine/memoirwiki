@@ -1,0 +1,469 @@
+.editor {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.previewRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  background: var(--app-surface-raised);
+  border-radius: 3px;
+}
+
+.artPreview {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: visible;
+}
+
+.artMask {
+  position: absolute;
+  left: 13.66%;
+  top: 20.93%;
+  width: 71.94%;
+  height: 71.79%;
+  overflow: hidden;
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.artImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.artPlaceholder {
+  width: 100%;
+  height: 100%;
+}
+
+.frameOverlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.previewInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.previewLabel {
+  font-family: var(--font-display);
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.previewName {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  background: var(--app-input-bg);
+  border: 1px solid var(--app-input-border);
+  border-radius: 3px;
+}
+
+.fieldLabel {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+}
+
+.textInput {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-primary);
+  background: transparent;
+  border: none;
+  outline: none;
+  text-align: right;
+  flex: 1;
+  min-width: 0;
+  margin-left: 8px;
+}
+
+.textInput::placeholder {
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+.sinPicker, .damagePicker {
+  display: flex;
+  gap: 5px;
+}
+
+.sinIcon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  opacity: 0.4;
+  filter: grayscale(0.4);
+  transition: transform 0.1s, opacity 0.15s;
+  border-radius: 50%;
+}
+
+.sinIcon:hover {
+  transform: scale(1.15);
+  opacity: 0.7;
+  filter: none;
+}
+
+.sinIconActive {
+  opacity: 1;
+  filter: none;
+}
+
+.damageIcon {
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  opacity: 0.4;
+  filter: grayscale(0.5);
+  transition: transform 0.1s, opacity 0.15s;
+}
+
+.damageIcon:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
+  filter: none;
+}
+
+.damageIconActive {
+  opacity: 1;
+  filter: none;
+}
+
+.olLabel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.olIcon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
+.olInput {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-highlight);
+  background: transparent;
+  border: none;
+  outline: none;
+  text-align: right;
+  flex: 1;
+  min-width: 0;
+  margin-left: 8px;
+}
+
+.olInput::placeholder {
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+.atkBtn {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: var(--app-surface-raised);
+  border: 1px solid var(--app-border);
+  border-radius: 3px;
+  width: 28px;
+  height: 26px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s, border-color 0.15s;
+  padding: 0;
+  line-height: 1;
+}
+
+.atkBtn:hover {
+  color: var(--text-gold);
+  border-color: var(--card-border-gold-dim);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+.statField {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 6px 4px;
+  background: var(--app-input-bg);
+  border: 1px solid var(--app-input-border);
+  border-radius: 3px;
+}
+
+.statLabel {
+  font-family: var(--font-display);
+  font-size: 8px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.statDisplay {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-highlight);
+  line-height: 1;
+}
+
+.statControls {
+  display: flex;
+  gap: 3px;
+}
+
+.artActions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-gold);
+  background: var(--app-surface-raised);
+  border: 1px solid var(--app-border);
+  border-radius: 4px;
+  padding: 6px 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn:hover {
+  background: var(--card-panel);
+  border-color: var(--card-border-gold-dim);
+}
+
+.btnDanger {
+  font-size: 11px;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--app-border);
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.btnDanger:hover {
+  color: var(--card-accent-red);
+  border-color: var(--card-accent-red);
+}
+
+.btnSmall {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-gold);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 4px;
+}
+
+.btnSmall:hover {
+  color: var(--text-gold-bright);
+}
+
+.btnDangerSmall {
+  font-size: 12px;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 2px 6px;
+  transition: color 0.15s;
+}
+
+.btnDangerSmall:hover {
+  color: var(--card-accent-red);
+}
+
+.slotPicker {
+  display: flex;
+  gap: 4px;
+}
+
+.slotBtn {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: var(--app-surface-raised);
+  border: 1px solid var(--app-border);
+  border-radius: 4px;
+  padding: 6px 14px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.slotBtn:hover {
+  color: var(--text-primary);
+  border-color: var(--card-border-gold-dim);
+}
+
+.slotBtnActive {
+  border-width: 2px;
+  padding: 5px 13px;
+}
+
+.descSection {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fieldRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.coinEffectRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px 8px;
+  background: var(--app-surface-raised);
+  border-radius: 3px;
+  margin-bottom: 4px;
+}
+
+.coinEffectHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.coinEffectLabel {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.coinTypePicker {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.coinTypeIcon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  cursor: pointer;
+  opacity: 0.35;
+  filter: grayscale(0.4);
+  transition: opacity 0.15s, transform 0.1s, filter 0.15s;
+  border-radius: 3px;
+}
+
+.coinTypeIcon:hover {
+  opacity: 0.7;
+  filter: none;
+  transform: scale(1.15);
+}
+
+.coinTypeIconActive {
+  opacity: 1;
+  filter: none drop-shadow(0 0 3px rgba(212, 175, 55, 0.4));
+}
+
+.coinUploadBtn {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: var(--app-surface-raised);
+  border: 1px dashed var(--app-border);
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.coinUploadBtn:hover {
+  color: var(--text-gold);
+  border-color: var(--card-border-gold-dim);
+}
+
+.coinLabelInput {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--text-primary);
+  background: var(--app-input-bg);
+  border: 1px solid var(--app-input-border);
+  border-radius: 3px;
+  padding: 4px 8px;
+  outline: none;
+  width: 100%;
+}
+
+.coinLabelInput:focus {
+  border-color: var(--app-accent);
+}
+
+.coinLabelInput::placeholder {
+  color: var(--text-muted);
+  opacity: 0.5;
+}

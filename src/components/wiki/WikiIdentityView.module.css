@@ -1,0 +1,80 @@
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.muted {
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+.error {
+  color: var(--card-accent-red);
+  font-size: 16px;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 24px 64px;
+}
+
+.backLink {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.backLink:hover {
+  color: var(--text-gold);
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  color: var(--text-gold);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.characterName {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin: 4px 0 0;
+}
+
+.cardBreakout {
+  width: min(1282px, calc(100vw - 48px));
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 32px;
+}
+
+.cardWrap {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 3px;
+  border: 1px solid var(--card-border);
+}
+
+.cardStage {
+  width: 1280px;
+  height: 720px;
+  transform-origin: top left;
+}
+
+.body {
+  min-height: 100px;
+}

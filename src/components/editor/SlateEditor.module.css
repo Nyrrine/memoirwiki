@@ -1,0 +1,284 @@
+.editorWrapper {
+  position: relative;
+}
+
+.editable {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-primary);
+  background: var(--app-input-bg);
+  border: 1px solid var(--app-input-border);
+  border-radius: 3px;
+  padding: 8px 10px;
+  min-height: 48px;
+  max-height: 120px;
+  overflow-y: auto;
+  outline: none;
+  line-height: 1.5;
+}
+
+.editableCompact {
+  min-height: 28px;
+  max-height: 72px;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.editable:focus {
+  border-color: var(--app-accent);
+  box-shadow: 0 0 0 1px rgba(201, 168, 76, 0.2);
+}
+
+.editable [data-slate-placeholder] {
+  color: var(--text-muted);
+  opacity: 0.5;
+  font-style: italic;
+}
+
+.paragraph {
+  margin: 0;
+}
+
+.tokenInline {
+  display: inline;
+  font-weight: 600;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.1s;
+}
+
+.tokenInline:hover {
+  opacity: 0.8;
+}
+
+.tokenIcon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.1em;
+  margin-right: 2px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.keyword {
+  font-weight: 700;
+}
+
+.keywordInline {
+  display: inline;
+  font-weight: 700;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.1s;
+}
+
+.keywordInline:hover {
+  opacity: 0.8;
+}
+
+.unknownToken {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.popup {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-bottom: 4px;
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: 4px;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.4);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.popupHeader {
+  padding: 4px 10px;
+  border-bottom: 1px solid var(--app-border);
+}
+
+.popupHint {
+  font-family: var(--font-display);
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.popupItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.popupItem:hover,
+.popupItemActive {
+  background: var(--app-surface-raised);
+}
+
+.popupIcon {
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.popupColorDot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.popupItemCustom {
+  border-top: 1px solid var(--app-border);
+  font-style: italic;
+}
+
+.popupName {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.popupKey {
+  font-family: var(--font-display);
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-left: auto;
+  letter-spacing: 0.3px;
+}
+
+.colorPicker {
+  position: absolute;
+  z-index: 200;
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  width: 220px;
+}
+
+.colorPickerLabel {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  color: var(--text-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 8px;
+}
+
+.colorPresets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.colorSwatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  padding: 0;
+}
+
+.colorSwatch:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.colorCustomRow {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.colorHexInput {
+  flex: 1;
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--text-primary);
+  background: var(--app-input-bg);
+  border: 1px solid var(--app-input-border);
+  border-radius: 3px;
+  padding: 4px 6px;
+  outline: none;
+}
+
+.colorHexInput:focus {
+  border-color: var(--app-accent);
+}
+
+.colorApplyBtn {
+  font-family: var(--font-heading);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+  background: var(--app-surface-raised);
+  border: 1px solid var(--app-border);
+  border-radius: 3px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.colorApplyBtn:hover {
+  background: var(--app-accent);
+  color: #1a1a1a;
+}
+
+.colorResetBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--text-secondary);
+  background: none;
+  border: 1px solid var(--app-border);
+  border-radius: 3px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s;
+}
+
+.colorResetBtn:hover {
+  background: var(--app-surface-raised);
+  color: var(--text-primary);
+}
+
+.colorResetSwatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-left: auto;
+}
+
+.wikilinkInline {
+  color: var(--text-gold);
+  text-decoration: underline;
+  text-decoration-color: var(--card-border-gold-dim);
+  cursor: default;
+}

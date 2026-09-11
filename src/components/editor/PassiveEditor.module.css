@@ -1,0 +1,28 @@
+.costRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background: var(--app-surface-raised);
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+
+.costNum {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-highlight);
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 36px;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.costNum::-webkit-outer-spin-button,
+.costNum::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

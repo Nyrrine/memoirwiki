@@ -1,0 +1,140 @@
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.muted { color: var(--text-muted); font-size: 16px; }
+.error { color: var(--card-accent-red); font-size: 16px; }
+
+.builder {
+  display: flex;
+  height: calc(100vh - 52px);
+}
+
+.editorPanel {
+  width: 420px;
+  min-width: 360px;
+  max-width: 480px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding: 16px 18px;
+  border-right: 1px solid var(--app-border);
+  background: var(--app-surface);
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.saveBtn {
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+  color: var(--card-bg);
+  background: var(--card-accent-gold);
+  transition: all 0.15s;
+}
+
+.saveBtn:hover:not(:disabled) {
+  background: var(--card-border-gold-bright);
+}
+
+.saveBtn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.backBtn {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--card-border);
+  border-radius: 3px;
+  padding: 7px 14px;
+  cursor: pointer;
+}
+
+.backBtn:hover {
+  color: var(--text-gold);
+  border-color: var(--card-border-gold-dim);
+}
+
+.saveError {
+  color: var(--card-accent-red);
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--text-gold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+
+.hint {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0 0 16px;
+  line-height: 1.4;
+}
+
+.previewPanel {
+  flex: 1;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  background: var(--app-bg);
+}
+
+.previewHeader {
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--card-divider);
+  background: var(--app-surface);
+}
+
+.previewLabel {
+  font-family: var(--font-display);
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.previewContent {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 24px 64px;
+}
+
+.cardWrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+  border-radius: 3px;
+  border: 1px solid var(--card-border);
+}
+
+.cardScale {
+  width: 1280px;
+  height: 720px;
+  transform-origin: top left;
+  transform: scale(0.55);
+  margin-bottom: calc(-720px * (1 - 0.55));
+}

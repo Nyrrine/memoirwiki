@@ -1,0 +1,60 @@
+.btn {
+  font-family: var(--font-display);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.sm { font-size: 10px; padding: 4px 10px; }
+.md { font-size: 11px; padding: 6px 16px; }
+.lg { font-size: 13px; padding: 10px 24px; letter-spacing: 2px; }
+
+.primary {
+  color: var(--card-bg);
+  background: var(--card-accent-gold);
+}
+.primary:hover:not(:disabled) {
+  background: var(--app-accent-hover);
+  box-shadow: var(--card-gold-glow);
+}
+
+.secondary {
+  color: var(--text-secondary);
+  background: var(--app-surface-raised);
+  border-color: var(--app-border);
+}
+.secondary:hover:not(:disabled) {
+  color: var(--text-gold);
+  border-color: var(--card-border-gold-dim);
+}
+
+.danger {
+  color: var(--card-accent-red);
+  background: transparent;
+  border-color: var(--card-accent-red);
+}
+.danger:hover:not(:disabled) {
+  color: #fff;
+  background: var(--card-accent-red);
+}
+
+.ghost {
+  color: var(--text-muted);
+  background: transparent;
+}
+.ghost:hover:not(:disabled) {
+  color: var(--text-gold);
+}

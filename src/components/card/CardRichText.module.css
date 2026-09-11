@@ -1,0 +1,64 @@
+.richText {
+  font-family: var(--font-body);
+  font-size: var(--fs-card-body);
+  color: var(--text-primary);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.paragraph {
+  margin: 0;
+}
+
+.paragraph + .paragraph {
+  margin-top: 2px;
+}
+
+.token {
+  display: inline;
+  font-weight: 600;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+.tokenIcon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  vertical-align: -0.1em;
+  margin-right: 2px;
+  object-fit: contain;
+  image-rendering: auto;
+}
+
+.tokenLabel {
+  white-space: nowrap;
+}
+
+.keyword {
+  font-weight: 700;
+}
+
+.unknownToken {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: var(--fs-card-small);
+}
+
+.wikilink {
+  color: var(--text-gold);
+  text-decoration: underline;
+  text-decoration-color: var(--card-border-gold-dim);
+}
+
+.wikilink:hover {
+  color: var(--app-accent-hover);
+}
+
+.wikilinkRed {
+  color: var(--card-accent-red);
+  text-decoration-color: var(--card-accent-red);
+  opacity: 0.85;
+}

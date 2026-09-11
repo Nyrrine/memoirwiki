@@ -1,0 +1,322 @@
+.manager {
+  margin-top: 4px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 10px;
+  color: var(--text-secondary);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.addBtn {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--card-border);
+  border-radius: 3px;
+  color: var(--text-gold);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.addBtn:hover {
+  border-color: var(--card-border-gold-dim);
+  background: var(--card-panel);
+}
+
+.hint {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--text-muted);
+  margin: 2px 0;
+}
+
+.error {
+  font-size: 11px;
+  color: var(--card-accent-red);
+  margin: 4px 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 6px;
+  border-radius: 3px;
+  margin-top: 4px;
+}
+
+.item:hover {
+  background: var(--app-surface-raised);
+}
+
+.itemLeft {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow: hidden;
+}
+
+.itemIcon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.itemIconPlaceholder {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.itemName {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.itemBadge {
+  font-family: var(--font-display);
+  font-size: 8px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.deleteBtn {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.item:hover .deleteBtn {
+  opacity: 1;
+}
+
+.deleteBtn:hover {
+  color: var(--card-accent-red);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 10px;
+  border: 1px solid var(--card-border);
+  border-radius: 3px;
+  background: var(--card-panel);
+}
+
+.input {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-primary);
+  background: var(--app-input-bg);
+  border: 1px solid var(--app-input-border);
+  border-radius: 3px;
+  padding: 6px 8px;
+  outline: none;
+  width: 100%;
+}
+
+.input:focus {
+  border-color: var(--card-border-gold-dim);
+}
+
+.keyRow {
+  display: flex;
+  gap: 4px;
+}
+
+.keyRow .input {
+  flex: 1;
+}
+
+.autoBtn {
+  font-family: var(--font-display);
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: var(--app-surface-raised);
+  border: 1px solid var(--card-border);
+  border-radius: 3px;
+  padding: 0 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.classRow {
+  display: flex;
+  gap: 4px;
+}
+
+.classBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 5px 4px;
+  background: transparent;
+  border: 1px solid var(--card-border);
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: all 0.1s;
+}
+
+.classBtnActive {
+  color: var(--text-primary);
+  background: var(--app-surface-raised);
+}
+
+.classDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.iconRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.iconLabel {
+  font-family: var(--font-display);
+  font-size: 9px;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.fileInput {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.fileInput::file-selector-button {
+  font-family: var(--font-display);
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  background: var(--app-surface-raised);
+  border: 1px solid var(--card-border);
+  border-radius: 3px;
+  padding: 4px 8px;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+.formActions {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.cancelBtn {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--card-border);
+  border-radius: 3px;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.createBtn {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--card-bg);
+  background: var(--card-accent-gold);
+  border: none;
+  border-radius: 3px;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.createBtn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.scopeRow {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.scopeBtn {
+  flex: 1;
+  font-family: var(--font-display);
+  font-size: 9.5px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 5px 6px;
+  border-radius: 3px;
+  border: 1px solid var(--app-border);
+  background: var(--app-surface);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.scopeBtn:hover { color: var(--text-primary); }
+
+.scopeBtnOn {
+  color: var(--card-bg);
+  background: var(--card-accent-gold);
+  border-color: var(--card-accent-gold);
+}
+
+.itemKey {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--text-muted);
+  margin-left: auto;
+  padding-right: 6px;
+  white-space: nowrap;
+}

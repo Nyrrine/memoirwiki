@@ -1,0 +1,26 @@
+.divider {
+  border: none;
+  margin: 24px 0;
+}
+
+.gold {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--card-border-gold-dim), transparent);
+}
+
+.thin {
+  height: 1px;
+  background: var(--card-divider);
+}
+
+.ornamental {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--card-border-gold-dim) 15%,
+    var(--card-accent-gold) 50%,
+    var(--card-border-gold-dim) 85%,
+    transparent 100%
+  );
+}

@@ -1,0 +1,184 @@
+.page {
+  width: var(--card-width);
+  height: var(--card-height);
+  background: var(--card-bg);
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+}
+
+.noise {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0.3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' fill='%23362e22'/%3E%3C/svg%3E");
+  background-size: 128px 128px;
+  mix-blend-mode: soft-light;
+}
+
+.columns {
+  display: flex;
+  height: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+.rightColumn {
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0 16px;
+  border-left: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.rightColumnFull {
+  border-left: none;
+}
+
+.rightColumnBg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.rightColumn {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.rightColumn::-webkit-scrollbar {
+  display: none;
+}
+
+.cautionBorderTop,
+.cautionBorderBottom {
+  height: 18px;
+  flex-shrink: 0;
+  opacity: 0.35;
+  pointer-events: none;
+  mask-size: auto 100%;
+  mask-repeat: repeat-x;
+  -webkit-mask-size: auto 100%;
+  -webkit-mask-repeat: repeat-x;
+  margin-left: -32px;
+  margin-right: -32px;
+  width: calc(100% + 64px);
+}
+
+.cautionBorderTop {
+  margin-bottom: 6px;
+  mask-image: url('/ui/caution-border-top.png');
+  -webkit-mask-image: url('/ui/caution-border-top.png');
+}
+
+.cautionBorderBottom {
+  margin-top: auto;
+  mask-image: url('/ui/caution-border-bottom.png');
+  -webkit-mask-image: url('/ui/caution-border-bottom.png');
+}
+
+.section {
+  margin-bottom: 10px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.sectionLabelText {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-gold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  white-space: nowrap;
+}
+
+.sectionLabelLine {
+  flex: 1;
+  height: 1px;
+  background: var(--card-border-gold-dim);
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.emptyText {
+  font-family: var(--font-display);
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  opacity: 0.5;
+}
+
+.stampWatermark {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.stampImage {
+  width: 360px;
+  height: auto;
+  opacity: 0.035;
+  filter: invert(1) grayscale(1);
+}
+
+.pageSingle {
+  width: var(--card-width);
+  min-height: var(--card-height);
+  height: auto;
+  background: var(--card-bg);
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+}
+
+.columnsSingle {
+  display: flex;
+  min-height: var(--card-height);
+  position: relative;
+  z-index: 3;
+}
+
+.rightColumnSingle {
+  overflow-y: visible;
+}
+
+.pageIndicator {
+  position: absolute;
+  bottom: 10px;
+  right: 16px;
+  font-family: var(--font-display);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  z-index: 4;
+}
+

@@ -1,0 +1,19 @@
+{
+  "framework": "vite",
+  "devCommand": "vite --port 5173",
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    {
+      "source": "/wiki/page/:slug",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": ".*([Dd]iscordbot|[Tt]witterbot|facebookexternalhit|[Tt]elegram[Bb]ot|[Ss]lack|[Ww]hats[Aa]pp|[Ll]inked[Ii]n[Bb]ot|[Gg]ooglebot).*"
+        }
+      ],
+      "destination": "/api/og?slug=:slug"
+    },
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}

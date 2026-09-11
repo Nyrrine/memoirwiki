@@ -1,0 +1,221 @@
+:root {
+  font-synthesis-weight: none;
+}
+
+@font-face {
+  font-family: 'Mikodacs';
+  src: url('/fonts/Mikodacs.woff2') format('woff2'),
+       url('/fonts/Mikodacs.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fredoka';
+  src: url('/fonts/Fredoka-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BebasKai';
+  src: url('/fonts/BebasKai.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LiberationSans';
+  src: url('/fonts/LiberationSans.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ExcelsiorSans';
+  src: url('/fonts/ExcelsiorSans.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('/fonts/Pretendard-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard Bold';
+  src: url('/fonts/Pretendard-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  
+  --card-width: 1280px;
+  --card-height: 720px;
+
+  --font-display: 'Mikodacs', 'Chakra Petch', sans-serif;
+  --font-heading: 'BebasKai', 'Teko', sans-serif;
+  --font-body: 'Pretendard', 'LiberationSans', 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-announce: 'Fredoka', 'Baloo 2', sans-serif;
+
+  --text-keyline:
+    0 1px 0 rgba(0, 0, 0, 0.55), 1px 0 0 rgba(0, 0, 0, 0.55),
+    0 -1px 0 rgba(0, 0, 0, 0.55), -1px 0 0 rgba(0, 0, 0, 0.55),
+    1px 1px 0 rgba(0, 0, 0, 0.4), -1px 1px 0 rgba(0, 0, 0, 0.4),
+    1px -1px 0 rgba(0, 0, 0, 0.4), -1px -1px 0 rgba(0, 0, 0, 0.4);
+
+  --sin-wrath: #961528;
+  --sin-wrath-light: #b82038;
+  --sin-wrath-dark: #6a0c1a;
+  --sin-wrath-bg: rgba(150, 21, 40, 0.12);
+  --sin-wrath-glow: 0 0 12px rgba(150, 21, 40, 0.35);
+
+  --sin-lust: #b86a18;
+  --sin-lust-light: #d48428;
+  --sin-lust-dark: #8a4c08;
+  --sin-lust-bg: rgba(184, 106, 24, 0.12);
+  --sin-lust-glow: 0 0 12px rgba(184, 106, 24, 0.35);
+
+  --sin-sloth: #a88a15;
+  --sin-sloth-light: #c4a020;
+  --sin-sloth-dark: #7a640c;
+  --sin-sloth-bg: rgba(168, 138, 21, 0.12);
+  --sin-sloth-glow: 0 0 12px rgba(168, 138, 21, 0.35);
+
+  --sin-gluttony: #2a7e25;
+  --sin-gluttony-light: #38a832;
+  --sin-gluttony-dark: #185a14;
+  --sin-gluttony-bg: rgba(42, 126, 37, 0.12);
+  --sin-gluttony-glow: 0 0 12px rgba(42, 126, 37, 0.35);
+
+  --sin-gloom: #2a8a84;
+  --sin-gloom-light: #38a8a0;
+  --sin-gloom-dark: #186660;
+  --sin-gloom-bg: rgba(42, 138, 132, 0.12);
+  --sin-gloom-glow: 0 0 12px rgba(42, 138, 132, 0.35);
+
+  --sin-pride: #1e3578;
+  --sin-pride-light: #2a4ba0;
+  --sin-pride-dark: #122250;
+  --sin-pride-bg: rgba(30, 53, 120, 0.12);
+  --sin-pride-glow: 0 0 12px rgba(30, 53, 120, 0.35);
+
+  --sin-envy: #6a30a8;
+  --sin-envy-light: #8b45d6;
+  --sin-envy-dark: #481878;
+  --sin-envy-bg: rgba(106, 48, 168, 0.12);
+  --sin-envy-glow: 0 0 12px rgba(106, 48, 168, 0.35);
+
+  --sin-wrath-icon-bg: rgba(150, 21, 40, 0.25);
+  --sin-lust-icon-bg: rgba(184, 106, 24, 0.25);
+  --sin-sloth-icon-bg: rgba(168, 138, 21, 0.25);
+  --sin-gluttony-icon-bg: rgba(42, 126, 37, 0.25);
+  --sin-gloom-icon-bg: rgba(42, 138, 132, 0.25);
+  --sin-pride-icon-bg: rgba(30, 53, 120, 0.25);
+  --sin-envy-icon-bg: rgba(106, 48, 168, 0.25);
+
+  --dmg-slash: #e64545;
+  --dmg-pierce: #f0a030;
+  --dmg-blunt: #50c060;
+
+  --res-fatal: #fd3f3f;
+  --res-weak: #f5904f;
+  --res-normal: #e3c190;
+  --res-endured: #a89e91;
+  --res-ineffective: #808080;
+
+  --card-bg: #1a1714;
+  --card-bg-secondary: #211e19;
+  --card-panel: #2a2520;
+  --card-panel-raised: #322c26;
+  --card-panel-skill: #241f1a;
+  --card-border: #4a4438;
+  --card-border-gold: #c9a84c;
+  --card-border-gold-dim: #8b7a45;
+  --card-border-gold-bright: #e0c060;
+  --card-divider: #3a352e;
+  --card-accent-gold: #d4af37;
+  --card-accent-red: #c83232;
+  --card-gold-glow: 0 0 8px rgba(201, 168, 76, 0.25);
+
+  --text-primary: #e8e4dc;
+  --text-secondary: #a8a4a0;
+  --text-muted: #605c58;
+  --text-highlight: #f0ede6;
+  --text-gold: #d4af37;
+  --text-gold-bright: #e8c850;
+
+  --fs-card-title: 28px;
+  --fs-card-subtitle: 17px;
+  --fs-card-body: 13.5px;
+  --fs-card-small: 11px;
+  --fs-card-stat: 26px;
+  --fs-card-skill-name: 16px;
+  --fs-card-coin: 13px;
+  --fs-card-label: 11px;
+
+  --sp-xs: 4px;
+  --sp-sm: 8px;
+  --sp-md: 12px;
+  --sp-lg: 16px;
+  --sp-xl: 24px;
+
+  --app-bg: #12100e;
+  --app-surface: #1e1b17;
+  --app-surface-raised: #2a2620;
+  --app-border: #3a352e;
+  --app-border-gold: #c9a84c;
+  --app-accent: #c9a84c;
+  --app-accent-hover: #e0c060;
+  --app-input-bg: #16140f;
+  --app-input-border: #3a352e;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--app-bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gold-divider {
+  height: 1px;
+  background: var(--card-border-gold-dim);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--app-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--app-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--card-border-gold-dim);
+}

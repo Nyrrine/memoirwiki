@@ -1,0 +1,77 @@
+.palette {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--card-divider);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 12px;
+  color: var(--text-gold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 4px 0;
+}
+
+.hint {
+  font-family: var(--font-body);
+  font-size: 10px;
+  color: var(--text-muted);
+  margin: 0 0 10px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 8px;
+  background: var(--card-panel);
+  border: 1px solid var(--card-border);
+  border-radius: 3px;
+  cursor: grab;
+  transition: all 0.15s;
+  text-align: center;
+}
+
+.card:active {
+  cursor: grabbing;
+}
+
+.card:hover {
+  border-color: var(--card-border-gold-dim);
+  background: var(--card-panel-raised);
+}
+
+.icon {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--text-gold);
+  background: var(--app-surface-raised);
+  padding: 4px 8px;
+  border: 1px solid var(--card-border);
+  border-radius: 2px;
+  line-height: 1;
+}
+
+.label {
+  font-family: var(--font-display);
+  font-size: 11px;
+  color: var(--text-primary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.desc {
+  font-family: var(--font-body);
+  font-size: 10px;
+  color: var(--text-muted);
+  line-height: 1.3;
+}

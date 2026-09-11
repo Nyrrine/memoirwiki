@@ -1,0 +1,46 @@
+.section {
+  margin-bottom: 16px;
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--card-panel);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.toggle:hover {
+  background: var(--card-panel-raised);
+}
+
+.icon {
+  color: var(--text-gold);
+  font-size: 14px;
+  width: 16px;
+  flex-shrink: 0;
+}
+
+.heading {
+  font-family: var(--wiki-font, var(--font-display));
+  font-size: 15px;
+  color: var(--wiki-text, var(--text-primary));
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.content {
+  padding: 14px 16px;
+  font-family: var(--wiki-font, var(--font-body));
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--wiki-text, var(--text-primary));
+  border-top: 1px solid var(--card-divider);
+}
